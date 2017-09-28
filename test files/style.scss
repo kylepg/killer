@@ -1,0 +1,1455 @@
+@import 'mixins';
+@import 'bootstrap-media-queries';
+
+/*====================================
+                MISC
+=====================================*/
+
+.padding-ten {
+	padding: 10px;
+}
+
+
+.tablesorter-default th, .tablesorter-default thead td {
+	background-color: #008348 !important;
+}
+
+/*====================================
+              OVERRIDES
+=====================================*/
+
+.moscone-flipped-content {
+	background-color: white;
+	padding: 0px;
+	border: 1px solid #e6e7e8;
+}
+body.new-style .burr-flipped-content, body.new-style .moscone-flipped-content, body.new-style .bryant-flipped-content {
+	border: 1px solid #e6e7e8;
+}
+
+.moscone-flipped-content .moscone-flipped-content-inner {
+	float: none !important;
+}
+
+/*====================================
+             SECTION WRAPS
+=====================================*/
+
+.profile {
+	margin: 0;
+	.row {
+		margin: 0px;
+	}
+}
+.profile-wrap {
+/*    border: 1px solid blue; */
+	display: none;
+
+	th {
+		font-family: 'futura-pt'
+	}
+
+	&.active {
+		display: block
+	}
+}
+.profile-header-wrap {
+/* 	border: 1px solid red; */
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+	white-space:nowrap;
+}
+.profile-averages-wrap {
+/* 	border: 1px solid green; */
+}
+.profile-content-wrap {
+/* 	border: 1px solid orange; */
+	background-color: white;
+}
+
+/*====================================
+            PROFILE HEADER
+=====================================*/
+
+.headshot {
+	position: absolute;
+	z-index: 30;
+	width: 325px;
+	bottom: 0;
+	left: 10%;
+	@include bootstrap-xs {
+		left: -10px;
+	}
+	@include bootstrap-xxs {
+		width: 285px;
+		left: -30px;
+	}
+}
+
+.player-select {
+	overflow:auto; 
+	display: none;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	@include bootstrap-sm {
+		display: block;
+	}
+}
+
+.profile-header {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    backgrond-color: white;
+    display: flex;
+    &-left{
+    	width: 40%;
+    	height: 100%;
+    	display: inline-block;
+    	position: relative;
+    	background: #008348;
+    	z-index: 30;
+    	@include bootstrap-xs {
+    		width: 30%;
+    	}
+    	@include bootstrap-xxs {
+    		width: 10%;
+    	}
+    	&:after {
+    		content: '';
+    		line-height: 0;
+    		font-size: 0;
+    		width: 0;
+    		height: 0;
+    		border-top: 50px transparent;
+    		border-bottom: 250px solid #008348;
+    		border-left: 0px solid transparent;
+    		border-right: 180px solid transparent;
+    		position: absolute;
+    		top: 0;
+    		right: -180px;
+    		z-index: 10;
+    	}
+    	&:before {
+    		content: '';
+    		line-height: 0;
+    		font-size: 0;
+    		width: 0;
+    		height: 0;
+    		border-top: 50px transparent;
+    		border-bottom: 250px solid white;
+    		border-left: 0px solid transparent;
+    		border-right: 180px solid transparent;
+    		position: absolute;
+    		top: 0;
+    		right: -185px;
+    		z-index: 10;
+    	}
+    }
+    &-right {
+    	position: relative;
+    	margin: 0;
+    	white-space: normal !important;
+    	padding: 0;
+    	list-style-type: none !important;
+    	display: inline-block;
+    	display: flex;
+    	flex-grow: 1;
+    	padding-left: 180px;
+    	width: 50%;
+    	height: 100%;
+    	display: inline-block;
+    	position: relative;
+    	background: white;
+    	@include bootstrap-sm {
+    	}
+    	.player-name {
+    		position: absolute;
+    		right: 20px;
+    		z-index: 11;
+    		color: #008348;
+    		top: -5px;
+    			span {
+    				font-weight: normal;
+    			}
+    	}
+    	.info-top {
+    		position: absolute;
+    		margin: 0;
+    		white-space:nowrap;
+    		padding: 0;
+    	    list-style-type: none !important;
+    	    top: 35px;
+    	    right: 20px;
+    	    li {
+    	    	float: left;
+    	    	white-space:nowrap;
+    	    	h4 {
+    	    		font-weight: 500 !important;
+    	    		color: #939393;
+    	    		font-size: 1.15em !important;
+    	    		@include bootstrap-xxs {
+    	    			font-size: 1.15em !important;
+    	    		}
+    	    		span {
+    	    			color: black;
+    	    			font-weight: 400 !important;
+    	    		}
+    	    	}
+    	    }
+    	}
+    	.info-bottom {
+    		list-style: none;
+    		padding-left: 0;
+    		bottom: 0px;
+    		position: absolute;
+    		height: 62%;
+    		display: flex;
+    		flex-direction: column;
+    		padding: 30px 5px 5px 25px;
+    		margin-bottom:0px;
+    		z-index: 20;
+    		li {
+    			position: relative;
+    			height: 35px;
+		    	h4 {
+		    		font-weight: 500 !important;
+		    		font-size: 1.15em !important;
+		    		margin-bottom: 0px;
+		    		margin-top: 0px;
+		    		color: black;
+		    		@include bootstrap-xxs {
+		    			font-size: 1.15em !important;
+		    		}
+		    		span {
+		    			font-weight: 400;
+		    		}
+		    	}
+	   		}
+	   		li:nth-child(1){
+	   			margin-left: -60px
+	   		}
+	   		li:nth-child(2){
+	   			margin-left: -30px
+	   		}
+    	}
+    }
+    &-gray {
+    	background-color: #dddddd;
+    	height: 62%;
+    	position: absolute;
+    	width: 100%;
+    	bottom: 0px;
+    	z-index: 10;
+    }
+    .loader-gif {
+    	width: 15px;
+    	position: relative;
+    	top: 6px;
+    	left: 20px;
+    	transform: translateY(-50%);
+    	-webkit-transform: translateY(-50%);
+    	-ms-transform: translateY(-50%);
+    	opacity: .5;
+    }
+}
+
+.celtics-logo {
+	width: 200px;
+	opacity: .5;
+	position: absolute;
+	z-index: 20;
+	left: 0px;
+	@include bootstrap-xs {
+		width: 100%;
+		top: 10px;
+		left: 5px;
+	}
+}
+
+.career-high p {
+	font-weight: bold !important;
+}
+
+.social-media {
+	width: 200px;
+	position: absolute;
+	z-index: 20;
+	left: 0px;
+	bottom: 0px;
+	margin: 0;
+	white-space:nowrap;
+	padding: 10px;
+    list-style-type: none !important;
+    li {
+    	white-space:nowrap;
+    }
+    .fa {
+    	color: white;
+    	position: relative;
+    	&.fa-twitter {
+    	}
+    }
+}
+/*====================================
+             TOOL TIP
+=====================================*/
+
+.averages-season td p {
+  position: relative;
+  display: inline;
+  .loader-gif {
+  	width: 15px;
+  	position: relative;
+  	transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  }
+}
+
+p.tooltips span {
+  position: absolute;
+  width:140px;
+  color: #FFFFFF;
+  background: #000000;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}
+
+p.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+p:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
+
+/*====================================
+            AVERAGES TABLE
+=====================================*/
+
+.averages {
+	width: 100%;
+	table-layout: fixed;
+	@include bootstrap-xs {
+		td:nth-child(4) {
+			display: none;
+		}
+		td:nth-child(5) {
+			display: none;
+		}
+		td:nth-child(6) {
+			display: none;
+		}
+	}
+	th {
+	    background-color: #dddddd !important;
+	    color: black;
+	    font-weight: 800px;
+	    text-align: left;
+	    border-left: 0 !important;
+	    width: 20%;
+	    min-width: 100px;
+	}
+	td {
+		width: auto;
+		p {
+			font-family: 'futura-pt' !important;
+		}
+	}
+	td:last-child {
+		border-right: 0 !important;
+	}
+	td:nth-child(odd) {
+	}
+	&-labels {
+		td {
+			border-bottom: none !important;
+			text-align: center;
+			padding: 0;
+			p {
+				margin: 0;	
+				&:first-child {
+						    color: #8a8d8f;
+						    font-size: 14px;
+						}
+			}
+		}
+		th {
+			border-bottom: 0;
+		}
+	}
+	&-season {
+		td {
+			border-top: none;
+			text-align: center;
+			border-top: 0px !important;
+		}
+		th {
+			border-top: 0px !important;
+		}
+		select {
+			border: none;
+			background-color: #dddddd;
+			box-shadow: none;
+			text-overflow:ellipsis;
+			@include bootstrap-xs {
+				display: none;
+			}
+			&.small {
+				display: none;
+				@include bootstrap-xs {
+					display: inline;
+					padding: 0;
+				}
+				@include bootstrap-xxs {
+/* 					display: none; */
+				}
+			}
+			&.extrasmall {
+				display: none;
+				@include bootstrap-xxs {
+					display: inline;
+					padding: 0;
+				}
+			}
+			option {
+			}
+		}
+	}
+	&-career {
+		td {
+			text-align: center;
+		}
+		select:disabled {
+			border: none;
+			background-color: #dddddd;
+			box-shadow: none;
+			/*for firefox*/
+			-moz-appearance: none;
+			/*for chrome*/
+			-webkit-appearance:none;
+			padding: 0;
+			&:hover {
+				cursor: default;
+			}
+		}
+	}
+	th, td {
+		border: 1px solid #a7a7a7;
+		padding: 5px;
+	}
+	tr:first-child{
+
+		th {
+			border-bottom: 0px;
+		}
+
+		td {
+			border-bottom: 0px;
+		}
+	}
+}
+
+/*====================================
+                TAB NAV
+=====================================*/
+
+.tab-wrap {
+    width: 100%;
+    background: #fafafa;
+    height: 75px;
+    text-align: center;
+    display: flex;
+    .tab-btn {
+        padding: 5px 15px;
+        display: inline-block;
+        position: relative;
+        color: #a7a7a7;
+        text-align: center;
+        height: 100%;
+        width: 20%;
+        line-height: 3;
+        font-size: 1.6rem !important;
+        font-family: "futura-pt",Helvetica,Arial,sans-serif !important;
+        font-weight: 400;
+        flex-grow: 1;
+        border: solid transparent;
+        border-width: 3px 1px 1px 1px;
+        border-bottom: 1px solid #dddddd;
+        &:hover {
+        	color: #008348;
+        }
+        &.active {
+        	background: #fff;
+        	color: #008348;
+        	border-color: #008248 #e1e4e8 transparent;
+        	&:first-child {
+        		border-left: none;
+        	}
+        	&:last-child {
+        		border-right: none;
+        	}
+        }
+        p {
+        	@include centered;
+        	white-space: nowrap
+        }
+        i, .att {
+        	display: block;
+        	font-size: 20px;
+        	margin-bottom: 5px;
+        }
+        .att {
+        	width: 20px;
+        	height: 20px;
+        	background-image: url("http://io.cnn.net/nba/nba/.element/media/2.0/teamsites/celtics/media/att-logo.svg");
+        }
+        .interest-button {
+        	i {
+        		color: white;
+        	}
+        }
+    }
+}
+
+/*====================================
+               CONTENT
+=====================================*/
+
+.profile-content {
+	display: none;
+	position: relative;
+	padding: 40px;
+	img {
+		display: block;
+	    max-width: 100%;
+	    height: auto;
+	    margin: 0 auto
+	}
+	&.active{
+		display: block;		
+	}
+}
+
+.bio-img {
+	display: block;
+	background-size: cover;
+	background-position: top;
+	&.portrait {
+		height: 500px;
+	}
+	&.landscape {
+		height: 200px;
+	}
+}
+
+button.loadmore {
+	background: #008348;
+	width: 240px;
+	padding: 10px 0;
+	margin: 20px auto;
+	color: #fafafa;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	border: 0 !important;
+	font-weight: bold;
+	&:hover {
+		background-color: #58b663;
+	}
+}
+
+.timeline-outer-wrap {
+	@include five-hundred {
+		width: 100% !important;
+	}
+}
+
+.timeline-wrap {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100px;
+	@include five-hundred {
+		justify-content: center;
+	}
+	@include sm {
+	 	flex-direction: row;
+	 	height: auto;
+	}
+	div {
+		display: flex;
+		height: 50%;
+		@include sm {
+			flex-direction: column;
+			width: 100%;
+		}
+		.segment {
+			flex-grow: 1;
+			border: 1px solid #cbcbcb;
+			display: flex;
+			height: 50px;
+			align-items: center;
+			justify-content: center;
+			&-inner {
+				flex-grow: 1;
+				position: relative;
+				display: flex;
+				height: 100%;
+				align-items: center;
+				opacity: 1;
+				flex-basis: auto;
+				justify-content: center;
+				&:hover {
+					opacity: .8;
+				}
+				p {
+					position: absolute;
+					width: 100%;
+					text-align: center;
+					color: white;
+					font-family: 'futura-pt';
+					font-weight: bold;
+				}
+			}
+			p {
+				text-align: center;
+			}
+		}
+	}
+	.season-year {
+		@include sm {
+			flex-direction: column;
+			width: 50%;
+		}
+		.segment {
+			border: 1px solid transparent;
+			flex-basis: auto;
+		}
+	}
+}
+
+.awards-wrap {
+	@include five-hundred {
+		width: 100% !important;
+	}
+	ul {
+		display: none;
+		padding-left: 20px;
+		list-style: none;
+		color: gray;
+		li:before {
+		  content: ".";
+		  margin-right: 0.4em;
+		  position: relative;
+		  top: -0.25em;
+		}
+		li.active {
+			font-weight: 600;
+		}
+		&.active {
+			display: block;
+		}
+	}
+	.awards-button {
+		display: none;
+		width: 15px;
+		margin-left: 10px;
+		margin-bottom: 4px;
+		cursor: pointer;
+		&.active {
+			display: inline-block;
+		}
+	}
+}
+
+.award {
+	display: block;
+	span {
+		font-weight: bold !important;
+	}
+}
+
+.career-highs-wrap {
+	@include five-hundred {
+		width: 100% !important;
+	}
+	.stat {
+		span:first-of-type {
+			font-weight: bold;
+		}
+		span:nth-of-type(2) {
+			color: gray;
+		}
+	}
+}
+
+
+/*====================================
+               STATS
+=====================================*/
+
+
+.stats-content {
+
+	section {
+		position: relative;
+	}
+
+	h3 {
+		border-bottom: none;
+	}
+
+	.stats-heading {
+		margin-bottom: 20px;
+		& > div {
+			height: 100%;
+		}
+		.more-stats {
+			color: #a8a9aa;
+			margin-bottom: 50px;
+			font-size: .9em;
+			position: absolute;
+			margin: 0;
+			top: 12px;
+			right: 4px;
+			p {
+				display: inline-block;
+			}
+		}
+		.switch {
+		  width: 60px;
+		  height: 34px;
+		  float: right;
+		  position: absolute;
+		  margin-bottom: 0px;
+		}
+		.switch input {display:none;}
+		.slider {
+		  position: absolute;
+		  cursor: pointer;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  background-color: #ccc;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+		.slider:before {
+		  position: absolute;
+		  content: "";
+		  height: 26px;
+		  width: 26px;
+		  left: 4px;
+		  bottom: 4px;
+		  background-color: white;
+		  -webkit-transition: .4s;
+		  transition: .4s;
+		}
+		input:checked + .slider {
+		  background-color: #008348;
+		}
+		input:focus + .slider {
+		  box-shadow: 0 0 1px #008348;
+		}
+		input:checked + .slider:before {
+		  -webkit-transform: translateX(26px);
+		  -ms-transform: translateX(26px);
+		  transform: translateX(26px);
+		}
+		.slider.rounded {
+		  border-radius: 34px;
+		}
+		.slider.rounded:before {
+		  border-radius: 50%;
+		}
+	}
+	.box-table-wrap {
+		width: 100%;
+		display: block;
+		overflow-x: scroll;
+		margin-bottom: 20px; 
+		&.loading {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+		table {
+			display: none;
+			&.active {
+				display: table;
+			}
+			overflow: hidden;
+			table-layout: fixed;
+
+			@include sm {
+				margin-left: 87px;
+				width: calc(100% + (550px - 100%));
+			}
+			@include md {
+				margin-left: 78px;
+				width: calc(100% + (680px - 100%));
+			}
+			thead tr .boxStatsSorter-headerDesc {
+				background-image: url('http://i.cdn.turner.com/drp/nba/celtics/sites/default/files/desc-light.gif');
+				box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+			}
+			thead tr .boxStatsSorter-headerAsc {
+				background-image: url('http://i.cdn.turner.com/drp/nba/celtics/sites/default/files/asc-light.gif');
+				box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+			}
+			thead tr .boxStatsSorter-header {
+				background-repeat: no-repeat;
+				background-position-y: 25px;
+				background-position-x: center;
+				&:hover {
+					box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);
+				}
+			}
+			tr {
+				width: 100%;
+				border: 1px solid #cbcbcb;
+				&:nth-of-type(even){
+				}
+				&:first-of-type {
+					td:first-of-type {
+						margin-top: 0px;
+					}
+				}
+				&.dnp {
+					color: #babcbe;
+				}
+				th {
+					color:white;
+					font-weight: 500;
+					&:first-of-type{
+						position: absolute;
+						overflow: hidden;
+						left: 0;   
+						border-top: 1px solid #cbcbcb;
+						border-left: 1px solid #cbcbcb;
+						border-right: none;
+						margin-top: -1px;
+		/* 				width: 24%; // Minimize the blank cell issue
+						min-width: 150px; //Minimize the blank cell issue */
+						width: 130px;
+						}
+					}
+				td {
+					&:first-of-type{
+						position: absolute;
+						overflow: hidden;
+						left: 0;   
+						margin-top: -1px;
+						border: 1px solid #cbcbcb;
+						white-space:nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						width: 130px;
+		/* 				width: 24%; // Minimize the blank cell issue
+						min-width: 150px; //Minimize the blank cell issue */
+					}
+
+					&:nth-of-type(2){
+						font-weight: bold;
+					}
+				}
+			}
+			th, td {
+				padding: 5px 10px 5px 10px;
+				text-align: center;
+				white-space: nowrap;
+				&.additional-stat {
+				}
+				&.inactive {
+					display: none;
+				}
+				&:first-child{
+					text-align: left;
+				}
+			}
+			h3 {
+				border-bottom: none;
+			}
+			.tablesorter-childRow td:not(:first-child):not(:nth-child(2)) {
+				opacity: .5;
+			}
+
+			&::-webkit-scrollbar {
+			    -webkit-appearance: none;
+			}
+			&::-webkit-scrollbar:vertical {
+			    width: 11px;
+			}
+			&::-webkit-scrollbar:horizontal {
+			    height: 11px;
+			}
+			&::-webkit-scrollbar-thumb {
+			    border-radius: 8px;
+			    border: 2px solid white; /* should match background, can't be transparent */
+			    background-color: rgba(0, 0, 0, .5);
+			}
+			&::-webkit-scrollbar-track { 
+			    background-color: #fff; 
+			    border-radius: 8px; 
+			} 
+
+			&.loading {
+				border-width: 0px 1px 1px 1px;
+				border-color: #dddddd;
+				border-style: solid;
+				&::-webkit-scrollbar:vertical {
+				    width:0px;
+				}
+				&::-webkit-scrollbar:horizontal {
+				    height: 0px;
+				}
+			}
+		}
+
+		&::-webkit-scrollbar {
+		    -webkit-appearance: none;
+		}
+		&::-webkit-scrollbar:vertical {
+		    width: 11px;
+		}
+		&::-webkit-scrollbar:horizontal {
+		    height: 11px;
+		}
+		&::-webkit-scrollbar-thumb {
+		    border-radius: 8px;
+		    border: 2px solid white; /* should match background, can't be transparent */
+		    background-color: rgba(0, 0, 0, .5);
+		}
+		&::-webkit-scrollbar-track { 
+		    background-color: #fff; 
+		    border-radius: 8px; 
+		} 
+	}
+	.filter-wrap {
+		margin-bottom: 20px;
+	}
+	.box-table-wrap {
+		thead {
+			cursor: pointer;
+		}
+		td:first-of-type {
+			background-color: white;
+		}
+
+		tr {
+			&.multi-team-season {
+				border-width: 0px;
+			}
+
+			&.total {
+				border-width: 0px;
+			}
+
+			&.sub-season {
+				td:first-of-type {
+					border-width: 0px 1px;
+				}
+			}
+		}
+
+		.form-control {
+			margin-right: 10px;
+		}
+
+	}
+}
+
+/*====================================
+               PHOTOS
+=====================================*/
+
+#photo-content {
+	overflow: hidden;
+	margin: 10px;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.photo-content {
+	.grid-item {
+		float: left;
+		 width: 200px;
+		 height: 200px;
+		 background: #008348;
+		 border: 1px solid black;
+	  }
+	 .grid-item--height2 { height: 300px; }
+}
+
+.photo-wrap {
+	overflow: hidden;
+	margin: 10px;
+	max-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.box {
+    float: left;
+    position: relative;
+    width: 33.3%;
+    padding-bottom: 25%;
+}
+
+.boxInner {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    overflow: hidden;
+    border: 1px solid #008348;
+
+    &:hover {
+    	opacity: .85;
+    	cursor: pointer;
+    }
+}
+
+.boxInner img { width: 100% }
+
+@media only screen and (max-width:480px) { 
+    /* Smartphone view: 1 tile */
+    .box {
+        width: 100%;
+        padding-bottom: 75%;
+    }
+}
+
+@media only screen and (max-width:650px) and (min-width:481px) { 
+    /* Tablet view: 2 tiles */
+    .box {
+        width: 50%;
+        padding-bottom: 37%;
+    }
+}
+
+@media only screen and (max-width:1050px) and (min-width:651px) { 
+    /* Small desktop / ipad view: 3 tiles */
+    .box {
+        width: 33.3%;
+        padding-bottom: 25%;
+    }
+}
+
+/*====================================
+                NEWS
+=====================================*/
+
+.news-content {
+	h3 {
+		border-bottom: none;
+		margin-top: 25px;
+
+		&:first-child {
+			margin-top: 5px;
+		}
+	}
+
+}
+
+.news-thumb-wrap {
+	@include bootstrap-xxs {
+		width: 100% !important;
+	}
+	.news-thumb {
+		border: 1px solid #cbcbcb;
+		position: relative;
+		height:200px;
+		margin-bottom: 20px;
+		background-size: cover;
+		&:hover {
+			h3 {
+				background-color: rgba(88, 182, 99, 0.9);
+			}
+		}
+		h3 {
+			background-color:rgba(0, 131, 72, .9);
+			color: white !important;
+		    margin: 0px;
+		    padding: 10px;
+		    bottom: 0px;
+		    position: absolute;
+		    width: 100%;
+		}
+	}
+}
+
+/*====================================
+                VIDEO
+=====================================*/
+
+.nbaCvpWrapper {
+	border: 2px solid #dddddd;
+	background: url("http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/small-loader.gif") black no-repeat center/50px;
+}
+
+.loader-wrap.video {
+	position: absolute;
+}
+
+.video-placeholder {
+	width: 100%; 
+	position: relative; 
+	overflow: hidden; 
+	padding-top: 56.24%; 
+	border: 2px solid #dddddd;
+	background-color: black;
+	background: url("http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/small-loader.gif") black no-repeat center/50px;
+}
+
+.video-content {
+
+	h1 {
+		margin-bottom: 40px;
+	}
+
+	.grid-item {
+	  float: left;
+	  width: 200px;
+	  height: 150px;
+	  border-color: hsla(0, 0%, 0%, 0.7);
+	  margin-bottom: 20px;
+
+	  .video-thumb {
+	  	border: 1px solid #cbcbcb;
+	  	position: relative;
+	  	height: 80%;
+	  	background-size: cover;
+	  }
+	  h4 {
+	  	margin: 10px 0px 25px 0px;
+	  	overflow: hidden;
+	  	white-space: nowrap;
+	  	text-overflow: ellipsis;
+	  }
+/* 	  .play-circle {
+	  	position: relative;
+	  	width: 40px;
+	  	height: 40px;
+	  	border: 3px white solid;
+	  	border-radius: 50%;
+	  	.play-triangle {
+	  		width: 0;
+	  		height: 0;
+	  		border-top: 8px solid transparent;
+	  		border-bottom: 8px solid transparent;
+	  		border-left: 15px solid white;
+	  		position: absolute;
+	  		margin-left: 2px;
+	  	} */
+
+
+	  	&:hover {
+	  		.video-thumb:after {
+	  			opacity: 1;
+	  		}
+	  	}
+
+	  	.video-thumb:after {
+	  		content: '\f129';
+  		    font-family: 'nba-custom';
+  		    font-style: normal;
+  		    font-weight: normal;
+  		    font-variant: normal;
+  		    font-size: 3em;
+  		    line-height: 1;
+  		    text-decoration: inherit;
+  		    text-rendering: optimizeLegibility;
+  		    text-transform: none;
+  		    -moz-osx-font-smoothing: grayscale;
+  		    -webkit-font-smoothing: antialiased;
+  		    font-smoothing: antialiased;
+  		    opacity: 0.6;
+  		    color: #fff;
+  		    position: absolute;
+  		    top: 50%;
+  		    left: 50%;
+  		    -webkit-transform: translate(-50%, -50%);
+  		    -moz-transform: translate(-50%, -50%);
+  		    -ms-transform: translate(-50%, -50%);
+  		    transform: translate(-50%, -50%);
+	  	}
+
+	  	&.active {
+
+	  		.video-thumb {
+	  			border: 3px solid #00b664;
+
+	  			&:after {
+	  				opacity: 1;
+	  				content: 'PLAYING';
+	  				font-family: 'futura-pt',Helvetica,Arial,sans-serif;
+	  				font-size: 1.8em;
+	  				font-weight: 500;
+	  			}
+
+			  	&:before {
+		  			content: "";
+		  			display: block;
+		  			position: absolute;
+		  			width: 100%;
+		  			height: 100%;
+		  			font-size: 56px;
+		  			font-size: 5.6rem;
+		  			background-color: rgba(0,0,0,0.4);
+		  			text-align: center;
+		  			position: absolute;
+		  			top: 50%;
+		  			-moz-transform: translate(0,-50%);
+		  			-ms-transform: translate(0,-50%);
+		  			-webkit-transform: translate(0,-50%);
+		  			transform: translate(0,-50%);
+		  			color: #fff;
+			  	}
+	  		}
+	  }
+
+	  &:hover {
+/* 	  	.play-circle {
+	  		position: relative;
+	  		width: 40px;
+	  		height: 40px;
+	  		border: 3px #00b664 solid;
+	  		border-radius: 50%;
+	  		.play-triangle {
+	  			width: 0;
+	  			height: 0;
+	  			border-top: 8px solid transparent;
+	  			border-bottom: 8px solid transparent;
+	  			border-left: 15px solid #00b664;
+	  			position: absolute;
+	  			margin-left: 2px;
+	  		}
+	  	} */
+	  	h4 {
+	  		color: #00b664;
+	  	}
+	  }
+	}
+	.grid-item--height2 { height: 200px; }
+}
+
+button.filter {
+
+
+	&.is-checked {
+
+	}
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.loader-wrap {
+	position: relative;
+	transform: translate(-50% , 0%);
+	width: 50px;
+	height: 50px;
+	margin: 20px 0px 20px 0px;
+	display: inline-block;
+	opacity: .5;
+	img {
+		position: absolute;
+		width: 90%;
+	}
+	.loader {
+	    border: 4px solid #008348; /* Light grey */
+	    border-top: 4px solid #f2f2f2; /* Green */
+	    border-radius: 50%;
+	    width: 100%;
+	    height: 100%;
+	    animation: spin 2s linear infinite;
+	    position: absolute;
+	}
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg)}
+    100% { transform: rotate(360deg)}
+}
+
+// ISOTOPE FILTER //
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+}
+
+/* ---- button ---- */
+
+button.filter {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-bottom: 10px;
+  background: #EEE;
+  border: none;
+  color: #a7a7a7;
+  font-family: sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 40px;
+}
+
+button.filter:hover {
+  color: #008348;
+}
+
+button.filter:active,
+button.filter.is-checked {
+  background-color: white;
+  border: 2px solid #008348;
+  font-weight: 400;
+  color: #008348;
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+	margin-bottom: 20px;
+}
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+  margin-bottom: 20px;
+}
+
+/* ---- isotope ---- */
+/* 
+.grid-item {
+
+} */
+
+/* clear fix */
+/* .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+} */
+
+/* ---- .element-item ---- */
+
+/* .grid-item {
+  position: relative;
+  float: left;
+  width: 225px;
+  height: 150px;
+  margin: 5px;
+  padding: 10px;
+  color: #262524;
+}
+
+.grid-item > * {
+  margin: 0;
+  padding: 0;
+} */
+
+.grid {
+  margin: 0 auto; /* centered */
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+
+/*====================================
+               ROSTER 
+=====================================*/
+
+.roster-wrap {
+	padding: 0px 10px 10px 10px;
+	@include bootstrap-sm {
+		display: none;
+	}
+	.roster {
+		width: 100%;
+		background-color: white;
+	}
+	th {
+		background-color: #008348;
+		color: white;
+	}
+	tr {
+		width: 100%;
+		border: 1px solid #cbcbcb;
+		&:hover {
+			color: #008348;
+			cursor: pointer;
+			background-color: #f2f2f2;
+		}
+		&:first-child:hover {
+			cursor: default;
+		}
+		&.active {
+			color: #008348;
+			background-color: #f2f2f2;
+		}
+		&:nth-child(even){
+		}
+	}
+	th, td {
+		padding: 5px 10px 5px 10px;
+	}
+	td {
+		&:nth-child(2) {
+			font-weight: 700;
+		}
+		span {
+			font-weight: 500;
+		}
+	}
+}
+

@@ -1,0 +1,336 @@
+<script> jQuery.boxTablesorter.addWidget({id:"staticRow",format:function(a){if(typeof jQuery(a).data("hasSorted")=="undefined"){jQuery(a).data("hasSorted",true);jQuery("tbody .static",a).each(function(){jQuery(this).data("tableindex",jQuery(this).index())})}else{var b=true;while(b){b=false;jQuery("tbody .static",a).each(function(){var c=jQuery(this).data("tableindex");if(c!=jQuery(this).index()){b=true;var d=jQuery(this).detach();var e=jQuery("tbody tr",a).length;if(c>=e){d.appendTo(jQuery("tbody",a))}else if(c==0){d.prependTo(jQuery("tbody",a))}else{d.insertBefore(jQuery("tbody tr:eq("+c+")",a))}}})}}}})</script>
+<script type="text/javascript" src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/js/jquery.boxTablesorter.min.js"></script>
+<!-- <script src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/js/jquery.boxTablesorter.widgets.min.js"></script> -->
+<script src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/js/widget-grouping.min.js"></script>
+<!-- <script type="text/javascript" src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/js/jquery.boxTablesorter.widgets.min.js"></script> -->
+<link rel="stylesheet" href="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/css/font-awesome.min.css?1">
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="http://www.nba.com/scout/team/cvp/videoPlayerScout.js"></script>
+<!-- STRING-REPLACE: CSS LINKS -->
+<!-- STRING-REPLACE: JS LINKS -->
+<div class="profile">
+    <div class="player-select">
+        <select class="form-control">
+            <option>SELECT A PLAYER </option>
+        </select>
+    </div>
+    <div class="profile-wrap empty active">
+        <header class="row profile-header-wrap default">
+            <div class="profile-header">
+                <div class="profile-header-gray">
+                </div>
+                <div class="profile-header-left">
+                    <ul class="social-media">
+<!--                         <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li> -->
+                    </ul>
+                    <img class="celtics-logo" alt="Celtics Logo" src="http://i.cdn.turner.com/drp/nba/celtics/sites/default/files/celtics-logo-400px.png"/>
+                </div>
+                <div class="profile-header-right">
+                    <h1 class="player-name"> SELECT A PLAYER ></h1>
+                    <ul class="info-top">
+                        <li><h4>POS: <span></span></h4></li>
+                        <li><h4>HT: <span></span></h4></li>
+                        <li><h4>WT: <span></span></h4></li>
+                    </ul>
+                    <ul class="info-bottom">
+                        <li><h4>DOB: <span></span></h4></li>
+                        <li><h4>DRAFTED: <span></span></h4></li>
+                        <li><h4>COLLEGE: <span></span></h4></li>
+                    </ul>
+                </div>
+                <img class="headshot" src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/celtics/media/generic-player-1040x760.png"/>
+            </div>
+        </header>
+        <div class="row profile-averages-wrap">
+            <table class="averages">
+                <tr class="averages-labels">
+                    <th> 
+                        <p></p>
+                    </th>
+                    <td> 
+                        <p>MIN</p>
+                    </td>
+                    <td> 
+                        <p>PTS</p>
+                    </td>
+                    <td> 
+                        <p>FG%</p>
+                    </td>
+                    <td> 
+                        <p>3P%</p>
+                    </td>
+                    <td> 
+                        <p>FT%</p>
+                    </td>
+                    <td> 
+                        <p>REB</p>
+                    </td>
+                    <td> 
+                        <p>AST</p>
+                    </td>
+                    <td> 
+                        <p>STL</p>
+                    </td>
+                    <td> 
+                        <p>BLK</p>
+                    </td>
+                </tr>
+                <tr class="averages-season">
+                    <th>
+                    <div class="dropdown">
+                        <select class="full form-control">
+                        </select>
+                        <select class="small form-control">
+                        </select>
+                    </div>
+                    </th>
+                    <td class="stat-4 career-high">
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-16 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-5 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-6 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-7 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-10 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-11 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-12 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-13 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                </tr>
+                <tr class="averages-career">
+                    <th>
+                    <div class="dropdown">
+                        <select disabled="true" class="form-control">
+                            <option> CAREER</option>
+                        </select>
+                    </div>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row tab-wrap">
+            <a class="tab-btn bio" href="#bio">
+                <p>
+                    <i class="fa fa-user tab-icon group" aria-hidden="true"></i>
+                    BIO
+                </p>
+            </a>
+            <a class="tab-btn stats" href="#stats">
+                <p>
+                    <i class="fa fa-bar-chart tab-icon group" aria-hidden="true"></i>
+                    STATS
+                </p>
+            </a>
+            <a class="tab-btn photo" href="#photo">
+                <p>
+                    <i class="fa fa-camera tab-icon group" aria-hidden="true"></i>
+                    PHOTO
+                </p>
+            </a>
+            <a class="tab-btn video" href="#video">
+                <p>
+                    <i class="fa fa-video-camera tab-icon group" aria-hidden="true"></i>
+                    VIDEO
+                </p>
+            </a>
+            <a class="tab-btn news" href="#news">
+                <p>
+                    <i class="fa fa-newspaper-o tab-icon group" aria-hidden="true"></i>
+                    NEWS
+                </p>
+            </a> 
+        </div>
+        <div class="row profile-content-wrap"></div>
+    </div>
+    <div class="profile-wrap loading">
+        <header class="row profile-header-wrap default">
+            <div class="profile-header">
+                <div class="profile-header-gray">
+                </div>
+                <div class="profile-header-left">
+                    <ul class="social-media">
+<!--                         <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i></li> -->
+                    </ul>
+                    <img class="celtics-logo" alt="Celtics Logo" src="http://i.cdn.turner.com/drp/nba/celtics/sites/default/files/celtics-logo-400px.png"/>
+                </div>
+                <div class="profile-header-right">
+                    <h1 class="player-name"></h1>
+                    <ul class="info-top">
+                        <li><h4>POS: <span></span></h4></li>
+                        <li><h4>HT: <span></span></h4></li>
+                        <li><h4>WT: <span></span></h4></li>
+                    </ul>
+                    <ul class="info-bottom">
+                        <li><h4>DOB: <span></span></h4></li>
+                        <li><h4>DRAFTED: <span></span></h4></li>
+                        <li><h4>COLLEGE: <span></span></h4></li>
+                    </ul>
+                </div>
+                <img class="loader-gif" src="https://cdn-prod.kampyle.com/resources/onsite/images/kloader.gif"/>
+            </div>
+        </header>
+        <div class="row profile-averages-wrap">
+            <table class="averages">
+                <tr class="averages-labels">
+                    <th> 
+                        <p></p>
+                    </th>
+                    <td> 
+                        <p>MIN</p>
+                    </td>
+                    <td> 
+                        <p>PTS</p>
+                    </td>
+                    <td> 
+                        <p>FG%</p>
+                    </td>
+                    <td> 
+                        <p>3P%</p>
+                    </td>
+                    <td> 
+                        <p>FT%</p>
+                    </td>
+                    <td> 
+                        <p>REB</p>
+                    </td>
+                    <td> 
+                        <p>AST</p>
+                    </td>
+                    <td> 
+                        <p>STL</p>
+                    </td>
+                    <td> 
+                        <p>BLK</p>
+                    </td>
+                </tr>
+                <tr class="averages-season">
+                    <th>
+                    <div class="dropdown">
+                        <select class="full form-control">
+                        </select>
+                        <select class="small form-control">
+                        </select>
+                    </div>
+                    </th>
+                    <td class="stat-4 career-high">
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-16 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-5 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-6 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-7 career-high"> 
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-10 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-11 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-12 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                    <td class="stat-13 career-high">    
+                        <p class="tooltips" href="#"><span>CAREER HIGH</span></p>
+                    </td>
+                </tr>
+                <tr class="averages-career">
+                    <th>
+                    <div class="dropdown">
+                        <select disabled="true" class="form-control">
+                            <option> CAREER</option>
+                        </select>
+                    </div>
+                    </th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="row tab-wrap">
+            <a class="tab-btn bio active" href="#bio">
+                <p>
+                    <i class="fa fa-user tab-icon group" aria-hidden="true"></i>
+                    BIO
+                </p>
+            </a>
+            <a class="tab-btn stats" href="#stats">
+                <p>
+                    <i class="fa fa-bar-chart tab-icon group" aria-hidden="true"></i>
+                    STATS
+                </p>
+            </a>
+            <a class="tab-btn photo" href="#photo">
+                <p>
+                    <i class="fa fa-camera tab-icon group" aria-hidden="true"></i>
+                    PHOTO
+                </p>
+            </a>
+            <a class="tab-btn video" href="#video">
+                <p>
+                    <i class="fa fa-video-camera tab-icon group" aria-hidden="true"></i>
+                    VIDEO
+                </p>
+            </a>
+            <a class="tab-btn news" href="#news" data-content-type="news">
+                <p>
+                    <i class="fa fa-newspaper-o tab-icon group" aria-hidden="true"></i>
+                    NEWS
+                </p>
+            </a> 
+        </div>
+        <div class="row profile-content-wrap" style="height:100px"></div>
+    </div>
+</div>
+<!-- STRING-REPLACE: COMMENT OUT IMPORTS (START) -->
+<style>
+    @import "../dist/css/profile.css"
+</style>
+<style>
+/*    @import "../node_modules/lightbox2/dist/css/lightbox.css"*/
+</style>
+<script>
+/*    @import "../node_modules/lightbox2/dist/js/lightbox.js"*/
+    @import "../dist/js/profile.js"
+</script>
+<!-- STRING-REPLACE: COMMENT OUT IMPORTS (END) -->
+
