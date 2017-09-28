@@ -1,0 +1,7 @@
+[
+	{
+	    "keys": ["super+ctrl+o"], // or ["ctrl+alt+o"] for Windows/Linux
+	    "command": "project_manager", "args": {"action": "new"}
+	},
+	{ "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find_in_files"} }
+]

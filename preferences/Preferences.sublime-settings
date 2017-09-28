@@ -1,0 +1,29 @@
+{
+	"Killer_tabs_medium": true,
+	"bold_folder_labels": true,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
+	"caret_extra_width": 3,
+	"caret_style": "phase",
+	"close_windows_when_empty": true,
+	"color_scheme": "Packages/killer/killer.tmTheme",
+	"draw_shadows": false,
+	"enable_tab_scrolling": false,
+	"font_face": "Consola",
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"theme": "killer.sublime-theme",
+	"wide_caret": true,
+	"word_wrap": false
+}
