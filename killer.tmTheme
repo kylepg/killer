@@ -32,6 +32,8 @@ Light Blue: #9EFFFF
         <string>#ec9f46</string>
         <key>foreground</key>
         <string>#FFFFFF</string>
+        <key>gutterForeground</key> <!-- KYLE -->
+        <string>#404e57</string>
         <key>invisibles</key>
         <string>#ffc600</string>
         <key>lineHighlight</key>
@@ -397,7 +399,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#5FE461</string> 
+        <string>#5FE461</string>
       </dict>
     </dict>
     <dict>
@@ -408,7 +410,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#fd9627</string> 
+        <string>#fd9627</string>
       </dict>
     </dict>
     <dict>
@@ -419,7 +421,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#838991</string> 
+        <string>#838991</string>
       </dict>
     </dict>
     <dict>
@@ -430,7 +432,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#b2a8e9</string> 
+        <string>#b2a8e9</string>
       </dict>
     </dict>
     <dict>
@@ -441,7 +443,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#c7c7c7</string> 
+        <string>#c7c7c7</string>
       </dict>
     </dict>
     <dict>
@@ -452,7 +454,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#c7c7c7</string> 
+        <string>#c7c7c7</string>
       </dict>
     </dict>
     <dict>
@@ -463,7 +465,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#ffd550</string> 
+        <string>#ffd550</string>
       </dict>
     </dict>
     <dict>
@@ -474,7 +476,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#fff</string> 
+        <string>#fff</string>
       </dict>
     </dict>
     <dict>
@@ -485,7 +487,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#4DB6AC</string> 
+        <string>#4DB6AC</string>
       </dict>
     </dict>
     <dict>
@@ -496,7 +498,7 @@ Light Blue: #9EFFFF
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#f76f67</string> 
+        <string>#f76f67</string>
       </dict>
     </dict>
     <dict>
@@ -965,8 +967,62 @@ Light Blue: #9EFFFF
 
 
     <!-- Language Specific -->
-
-
+    <!-- JAVASCRIPT -->
+    <dict>
+      <key>name</key>
+      <string>Text</string>
+      <key>scope</key>
+      <string>variable.parameter.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#d3d0c8</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Punctuation</string>
+      <key>scope</key>
+      <string>punctuation.definition.string, punctuation.definition.variable, punctuation.definition.string, punctuation.definition.parameters, punctuation.definition.string, punctuation.definition.array</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#d3d0c8</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Variables</string>
+      <key>scope</key>
+      <string>variable, variable.other.dollar.only.js</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#f76f67</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Functions</string>
+      <key>scope</key>
+      <string>entity.name.function, meta.require, support.function.any-method, variable.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#80CBC4</string>
+      </dict>
+    </dict>
+    <dict>
+      <key>name</key>
+      <string>Text</string>
+      <key>scope</key>
+      <string>variable.parameter.function</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#d3d0c8</string>
+      </dict>
+    </dict>
     <!-- HTML -->
 
     <dict>
@@ -980,106 +1036,6 @@ Light Blue: #9EFFFF
         <string>#ffffff</string> <!-- KYLE Quotes around object js string -->
       </dict>
     </dict>
-
-    <!-- JAVASCRIPT! -->
-    <dict>
-      <key>name</key>
-      <string>JavaScript Function</string>
-      <key>scope</key>
-      <string>storage.type.function.js </string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#ffa5f3</string>
-<!--         <key>background</key>
-        <string>#1d3c52</string> -->
-      </dict>
-    </dict>
-
-    <dict>
-      <key>name</key>
-      <string>Quotes</string>
-      <key>scope</key>
-      <string>punctuation.definition.string.begin.js, punctuation.definition.string.end.js</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#ffffff</string> <!-- KYLE Quotes around object js string -->
-      </dict>
-    </dict>
-
-    <dict>
-      <key>name</key>
-      <string>Quotes</string>
-      <key>scope</key>
-      <string>constant.numeric.js</string>
-      <key>settings</key>
-      <dict>
-        <key>foreground</key>
-        <string>#f76f67</string> <!-- KYLE JS Number -->
-      </dict>
-    </dict>
-
-   <dict>
-     <key>name</key>
-     <string>Object Keys</string>
-     <key>scope</key>
-     <string>
-      , string.unquoted.label.js,
-      , meta.object-literal.key.js -string,
-     </string>
-     <key>settings</key>
-     <dict>
-       <key>foreground</key>
-       <string>#ffffff</string>
-     </dict>
-   </dict>
-
-  <!--
-    ES6 Classes
-   -->
-
-   <dict>
-     <key>name</key>
-     <string>Class Name</string>
-     <key>scope</key>
-     <string>
-      , entity.name.class.js,
-      , entity.name.type.class.js,
-     </string>
-     <key>settings</key>
-     <dict>
-       <key>foreground</key>
-       <string>#FB94FF</string>
-     </dict>
-   </dict>
-
-   <dict>
-     <key>name</key>
-     <string>Class KeyWord</string>
-     <key>scope</key>
-     <string>storage.type.class.js</string>
-     <key>settings</key>
-     <dict>
-       <key>foreground</key>
-       <string>#FF9D00</string>
-     </dict>
-   </dict>
-
-   <dict>
-     <key>name</key>
-     <string>Extends</string>
-     <key>scope</key>
-     <string>
-      , storage.type.extends.js,
-      , storage.modifier.extends.js,
-     </string>
-     <key>settings</key>
-     <dict>
-       <key>fontStyle</key>
-       <string>italic</string>
-     </dict>
-   </dict>
 
     <dict>
       <key>name</key>

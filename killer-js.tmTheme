@@ -28,6 +28,8 @@
 		<dict>
 			<key>settings</key>
 			<dict>
+				<key>gutterForeground</key> <!-- KYLE -->
+				<string>#404e57</string>
 				<key>background</key>
 				<string>#263238</string>
 				<key>caret</key>
@@ -516,17 +518,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#66cccc</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Embedded</string>
-			<key>scope</key>
-			<string>punctuation.section.embedded, variable.interpolation</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#d27b53</string>
 			</dict>
 		</dict>
 		<dict>

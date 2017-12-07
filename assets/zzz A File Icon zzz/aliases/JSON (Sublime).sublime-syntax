@@ -13,6 +13,7 @@ file_extensions:
   - sublime-workspace
   - sublime-keymap
   - sublime-mousemap
+  - tmTheme
 scope: source.json.sublime
 contexts:
   main:
